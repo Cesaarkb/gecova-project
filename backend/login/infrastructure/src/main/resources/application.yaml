@@ -1,0 +1,25 @@
+spring:
+    datasource:
+        username: sa
+        url: jdbc:h2:mem:testdb
+        password:
+        driver-class-name: org.h2.Driver
+    sql:
+        init:
+            mode: always
+            schema-locations:
+            - classpath:schema.sql
+    jpa:
+      hibernate:
+        ddl-auto: update
+      database-platform: org.hibernate.dialect.H2Dialect
+    autoconfigure:
+      exclude:
+      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+security:
+    jwt:
+      secret-key: clave-secreta-proyecto
+      expiration-ms: 3600000
+server:
+  port: 8080
