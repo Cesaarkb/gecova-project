@@ -131,6 +131,11 @@
     <artifactId>mockito-junit-jupiter</artifactId>
     <scope>test</scope>
 </dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.3.0</version> <!-- Esta versión es compatible con Spring Boot 3.2.x -->
+		</dependency>
 	</dependencies>
 
 </project>
