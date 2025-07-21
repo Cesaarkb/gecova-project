@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/peticion")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class PeticionCommandController {
     private final PeticionCreateHandler peticionCreateHandler;
     private final PeticionUpdateHandler peticionUpdateHandler;

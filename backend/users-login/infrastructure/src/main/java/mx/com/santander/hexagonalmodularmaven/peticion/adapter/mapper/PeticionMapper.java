@@ -48,7 +48,6 @@ public class PeticionMapper {
     public PeticionEntity toEntity(PeticionModel d) {
         var e = new PeticionEntity();
 
-        e.setId(d.getId().getId());
         e.setCliente(d.getCustomer().getCustomer());
         e.setUnidadOrganizativa(d.getOrganizationUnit().getOrganizationUnit());
         e.setNombreGestor(d.getManagerName().getManagerName());
