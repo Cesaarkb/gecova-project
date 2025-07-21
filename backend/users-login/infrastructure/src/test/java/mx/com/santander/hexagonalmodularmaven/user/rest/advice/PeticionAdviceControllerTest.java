@@ -6,6 +6,7 @@ import mx.com.santander.hexagonalmodularmaven.peticion.model.exception.PeticionI
 import mx.com.santander.hexagonalmodularmaven.peticion.model.exception.PeticionNotFoundException;
 import mx.com.santander.hexagonalmodularmaven.peticion.rest.advice.PeticionAdviceController;
 import org.junit.jupiter.api.Test;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,17 +20,18 @@ class PeticionAdviceControllerTest {
 
     @Test
     void handlePeticionException_returnsBadRequestResponse() {
-        String message = "Error genérico de petición";
-        PeticionException ex = new PeticionException(message);
+        String message = "Datos inválidos en la petición";
+        PeticionInputException ex = new PeticionInputException(message);
 
-        ResponseEntity<PeticionErrorResponse> responseEntity = advice.handlePeticionException(ex);
+        ResponseEntity<PeticionErrorResponse> responseEntity = advice.handleCustomerInputException(ex);
 
-        assertEquals(BAD_REQUEST, responseEntity.getStatusCode());
-        assertNotNull(responseEntity.getBody());
+        assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
+
         PeticionErrorResponse body = responseEntity.getBody();
-        assertEquals(BAD_REQUEST.value(), body.getStatus());
-        assertEquals("Cliente malo", body.getError());
-        assertEquals(message, body.getMessage());
+        assertNotNull(body);
+        assertEquals(HttpStatus.BAD_REQUEST.value(), body.getStatus());
+        assertEquals("Datos invalidos", body.getError());
+        assertEquals(message, body.getMessage()); // Aquí antes fallaba
         assertNotNull(body.getTimestamp());
     }
 

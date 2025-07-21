@@ -7,8 +7,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class PeticionNotFoundException extends RuntimeException{
     private String errorMessage;
+
+    public PeticionNotFoundException(String message) {
+        super(message);
+    }
 }
