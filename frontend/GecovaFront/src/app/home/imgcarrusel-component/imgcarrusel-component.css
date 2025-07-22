@@ -1,0 +1,31 @@
+.carrusel {
+  width: 100%;
+  height: 400px; /* Puedes ajustar la altura */
+  background-image: url("https://storage.googleapis.com/fundraising-external-files/Content/external/blog/Free-photo-business-people-teamwork.jpg"); /* Reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.texto-superpuesto {
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 40%;
+}
+
+.texto-superpuesto h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.texto-superpuesto h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.fecha-hora {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2em;
+}

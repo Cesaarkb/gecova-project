@@ -1,0 +1,34 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container-principal{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+.container{
+    width: 100%;
+    max-width: 100%; 
+    margin-bottom: 5rem;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    overflow: hidden;
+}
+
+.title-container{
+    background-color: #004254;
+    border-radius: 8px 8px 0px 0px !important;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-align: left !important;
+    padding: 1rem;
+    margin: 0;
+    line-height: 1.4 !important;
+}
