@@ -17,11 +17,11 @@ public class PeticionMapperTest {
     void testToDomain() {
         PeticionEntity entity = new PeticionEntity();
         entity.setId(1L);
-        entity.setCliente("Cliente X");
-        entity.setUnidadOrganizativa("Unidad Y");
-        entity.setNombreGestor("Gestor Z");
-        entity.setSolicitanteMercado("Solicitante A");
-        entity.setRazonSocial("Empresa B");
+        entity.setCliente("Santander");
+        entity.setUnidadOrganizativa("Minsait");
+        entity.setNombreGestor("carlos alberto");
+        entity.setSolicitanteMercado("postulante dev");
+        entity.setRazonSocial("indra");
         entity.setPrioridad("Alta");
         entity.setPosiciones(2);
         entity.setTipoContratacion("Temporal");
@@ -30,7 +30,7 @@ public class PeticionMapperTest {
         entity.setElementoParaContrataciones("Elemento X");
         entity.setMesesAsignacion(2);
         entity.setModalidad("Remoto");
-        entity.setLugarDefinitivo("Oficina Central");
+        entity.setLugarDefinitivo("Oficina Central Antara");
         entity.setTipoAsignacion("Full-time");
         entity.setPlanCarrera("Plan A");
         entity.setRolDesarrollo("Desarrollador");
@@ -40,7 +40,7 @@ public class PeticionMapperTest {
         entity.setTipoProyecto("Interno");
         entity.setMargenPresupuestado(BigDecimal.valueOf(23));
         entity.setMargenAcumulado(BigDecimal.valueOf(23));
-        entity.setPlanRecuperacion("Plan B");
+        entity.setPlanRecuperacion("Plan 1");
         entity.setComentariosGenerales("Sin comentarios");
         entity.setPerfil("Senior");
         entity.setNivel("Nivel 3");
@@ -79,4 +79,39 @@ public class PeticionMapperTest {
         assertEquals(entity.getConocimientosFuncionales(), model.getFunctionalKnowledge().getFunctionalKnowledge());
     }
 
+    @Test
+    void testEntityFromValidModel(){
+        PeticionModel model = PeticionModelTest.createValidModel();
+
+        PeticionEntity entity = mapper.toEntity(model);
+        assertEquals("Santander",entity.getCliente());
+        assertEquals("Minsait", entity.getUnidadOrganizativa());
+        assertEquals("carlos alberto", entity.getNombreGestor());
+        assertEquals("postulante dev", entity.getSolicitanteMercado());
+        assertEquals("indra", entity.getRazonSocial());
+        assertEquals("Alta", entity.getPrioridad());
+        assertEquals(2, entity.getPosiciones());
+        assertEquals("Temporal", entity.getTipoContratacion());
+        assertEquals("PRJ001", entity.getCodigoProyecto());
+        assertEquals("Proyecto Uno", entity.getNombreProyecto());
+        assertEquals("Elemento X", entity.getElementoParaContrataciones());
+        assertEquals(2, entity.getMesesAsignacion());
+        assertEquals("Remoto", entity.getModalidad());
+        assertEquals("Oficina Central", entity.getLugarDefinitivo());
+        assertEquals("Full-time", entity.getTipoAsignacion());
+        assertEquals("Plan A", entity.getPlanCarrera());
+        assertEquals("Desarrollador", entity.getRolDesarrollo());
+        assertEquals("Evaluador 1", entity.getEvaluadorPerformanceTalent());
+        assertEquals(2.0, entity.getTasa());
+        assertEquals(2.3, entity.getTasaTope());
+        assertEquals("Interno", entity.getTipoProyecto());
+        assertEquals(new BigDecimal("23.00"), entity.getMargenPresupuestado());
+        assertEquals(new BigDecimal("23.00"), entity.getMargenAcumulado());
+        assertEquals("Plan B", entity.getPlanRecuperacion());
+        assertEquals("Sin comentarios", entity.getComentariosGenerales());
+        assertEquals("Senior", entity.getPerfil());
+        assertEquals("Nivel 3", entity.getNivel());
+        assertEquals("Java, Spring", entity.getConocimientosTecnicos());
+        assertEquals("Contabilidad", entity.getConocimientosFuncionales());
+    }
 }
