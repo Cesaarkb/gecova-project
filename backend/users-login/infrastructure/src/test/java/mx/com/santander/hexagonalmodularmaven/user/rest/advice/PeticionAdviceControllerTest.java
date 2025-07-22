@@ -19,6 +19,21 @@ class PeticionAdviceControllerTest {
     private final PeticionAdviceController advice = new PeticionAdviceController();
 
     @Test
+    void handlePeticionExceptionBadRequestClienteMalo(){
+    String errorMessage ="cliente no existe";
+    PeticionException ex = new PeticionException(errorMessage);
+    PeticionAdviceController handler = new PeticionAdviceController();
+
+    ResponseEntity<PeticionErrorResponse> responseEntity = handler.handlePeticionException(ex);
+    PeticionErrorResponse body = responseEntity.getBody();
+        assertNotNull(body);
+        assertEquals(HttpStatus.BAD_REQUEST.value(), body.getStatus());
+        assertEquals("Cliente malo", body.getError());
+        assertEquals(errorMessage, body.getMessage());
+        assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
+        assertNotNull(body.getTimestamp());
+    }
+    @Test
     void handlePeticionException_returnsBadRequestResponse() {
         String message = "Datos inválidos en la petición";
         PeticionInputException ex = new PeticionInputException(message);

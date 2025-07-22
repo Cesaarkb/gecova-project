@@ -26,6 +26,7 @@ public class PeticionQueryController {
 
     @GetMapping("/{id}")
     public ResponseEntity<PeticionDTO> findById(@PathVariable(value = "id") Long id){
+
         return new ResponseEntity<>(peticionByIdHandler.execute(id),HttpStatus.OK);
     }
 }

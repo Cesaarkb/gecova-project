@@ -5,7 +5,7 @@ import mx.com.santander.hexagonalmodularmaven.peticion.model.entity.PeticionMode
 import org.springframework.stereotype.Component;
 
 @Component
-public class PeticionMapper {
+public class PeticionMapper { //test cors advice controller peticion
 
     public PeticionModel toDomain(PeticionEntity e)
     {
