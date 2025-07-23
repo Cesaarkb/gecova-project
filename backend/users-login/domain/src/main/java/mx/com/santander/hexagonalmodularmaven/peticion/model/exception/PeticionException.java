@@ -7,9 +7,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class PeticionException extends RuntimeException{
 
     private String errorMessage;
+
+    public PeticionException(String error){
+        super(error);
+    }
 }

@@ -2,10 +2,11 @@ package mx.com.santander.hexagonalmodularmaven.peticion.adapter.mapper;
 
 import mx.com.santander.hexagonalmodularmaven.peticion.adapter.entity.PeticionEntity;
 import mx.com.santander.hexagonalmodularmaven.peticion.model.entity.PeticionModel;
+import org.springframework.data.mongodb.core.mapping.TextScore;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PeticionMapper {
+public class PeticionMapper { //test cors advice controller peticion
 
     public PeticionModel toDomain(PeticionEntity e)
     {
@@ -48,7 +49,6 @@ public class PeticionMapper {
     public PeticionEntity toEntity(PeticionModel d) {
         var e = new PeticionEntity();
 
-        e.setId(d.getId().getId());
         e.setCliente(d.getCustomer().getCustomer());
         e.setUnidadOrganizativa(d.getOrganizationUnit().getOrganizationUnit());
         e.setNombreGestor(d.getManagerName().getManagerName());
@@ -81,4 +81,6 @@ public class PeticionMapper {
 
         return e;
     }
+
+
 }

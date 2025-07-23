@@ -16,8 +16,11 @@ public class PeticionAdviceController {
 
     @ExceptionHandler(PeticionException.class)
     public ResponseEntity<PeticionErrorResponse> handlePeticionException(PeticionException ex){
-        PeticionErrorResponse response = new PeticionErrorResponse(LocalDateTime.now(),
-                HttpStatus.BAD_REQUEST.value(),"Cliente malo",ex.getMessage());
+        PeticionErrorResponse response = new PeticionErrorResponse(
+                LocalDateTime.now(),
+                HttpStatus.BAD_REQUEST.value(),
+                "Cliente malo",
+                ex.getMessage());
         return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
     }
 

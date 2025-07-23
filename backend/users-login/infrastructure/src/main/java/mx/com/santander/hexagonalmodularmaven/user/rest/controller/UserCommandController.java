@@ -13,6 +13,7 @@ import mx.com.santander.hexagonalmodularmaven.user.rest.controller.dto.UserLogin
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class UserCommandController {
 
    private final UserAuthenticationHandler userAuthenticationHandler;
