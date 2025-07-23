@@ -1,0 +1,70 @@
+<mat-toolbar class="custom-toolbar">
+    <div class="toolbar-left">
+        <svg class="icon-white" width="24" height="24" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm65.18 216.01H224v80c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-80H94.82c-14.28 0-21.41-17.29-11.27-27.36l96.42-95.7c6.65-6.61 17.39-6.61 24.04 0l96.42 95.7c10.15 10.07 3.03 27.36-11.25 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z" />
+        </svg>
+        <span class="title">Peticiones</span>
+    </div>
+    <span class="spacer"></span>
+    <button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <svg class="apps-icon" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff"
+                d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z" />
+        </svg>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <span>Process HQ</span>
+        </button>
+        <button mat-menu-item>
+            <span>Administrador</span>
+        </button>
+        <button mat-menu-item>
+            <span>Candidatos</span>
+        </button>
+        <button mat-menu-item>
+            <span>Control de proyectos</span>
+        </button>
+        <button mat-menu-item>
+            <span>Disponibles</span>
+        </button>
+        <button mat-menu-item>
+            <span>Entrevistas</span>
+        </button>
+        <button mat-menu-item>
+            <span>Gecova</span>
+        </button>
+        <button mat-menu-item>
+            <span>Gestión Empleados</span>
+        </button>
+        <button mat-menu-item>
+            <span>Informe</span>
+        </button>
+        <button mat-menu-item>
+            <span>OTs</span>
+        </button>
+    </mat-menu>
+    <button matIconButton [matMenuTriggerFor]="menuProfile" class="avatar-button">
+        <div class="avatar">DJ</div>
+    </button>
+    <mat-menu #menuProfile="matMenu">
+        <button mat-menu-item>
+            <div style="display: flex; flex-direction: column;">
+                <span>Diana Juarez - SOPORTE</span>
+                <span style="font-size: 12px; color: gray;">GCV_PMOS</span>
+            </div>
+        </button>
+        <button mat-menu-item>
+            <span>Profile</span>
+        </button>
+        <button mat-menu-item>
+            <span>Settings</span>
+        </button>
+        <button mat-menu-item (click)="logOut()">
+            <span>Sign Out</span>
+        </button>
+    </mat-menu>
+    <img class="appian-logo" alt="Logo"
+        src="https://www.techtammina.com/wp-content/uploads/2023/04/APPN_BIG.D-de40bb8d-2.webp">
+</mat-toolbar>

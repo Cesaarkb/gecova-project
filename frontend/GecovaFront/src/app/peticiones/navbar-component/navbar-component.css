@@ -1,0 +1,56 @@
+.custom-toolbar {
+  background-color: #46708c;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-top-left-radius: 10px; /* esquina redondeada */
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.icon-white {
+  fill: white;
+  margin-right: 12px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.apps-icon {
+  margin-right: 12px;
+  fill: white;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #cfd8dc;
+  color: #252424;
+  border-radius: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight:400;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.appian-logo {
+  height: 28px;
+}
+
+.avatar-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}

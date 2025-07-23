@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+
+.main-layout {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Columna izquierda completa */
+.anuncios-columna {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Título fuera del cuadro azul */
+.anuncios-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #05475f;
+  margin: 0;
+}
+
+/* Cuadro azul */
+.anuncios {
+  background-color: #05475f;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contenido .seccion {
+  margin-bottom: 15px;
+}
+
+.contenido hr {
+  border: 1px solid #ffffff33;
+}
+
+/* Recursos fuera del cuadro azul */
+.recursos {
+  margin-top: 10px;
+}
+
+.recad {
+  color: #05475f;
+  margin: 0;
+}
+
+.gestor,
+.rh {
+  color: #05475f;
+  font-size: 14px;
+}
+
+/* Accesos */
+.container {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #05475f;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  background-color: #e7eaeb;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 140px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.card p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

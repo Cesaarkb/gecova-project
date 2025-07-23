@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+
+ html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+.full-height {
+      height: 97vh; 
+    }
+
+.col-7{
+    background-color:  rgb(65, 107, 136);
+     
+}
+
+.col-5{
+    background-color:#ebf1f7 ;
+}
+
+
+.footer{
+    background-color: #222;
+    color: #ebf1f7;
+    height: 3vh;
+    text-align: end;
+    font-size: 11px;
+
+}
+
+.login-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 400px;
+      min-height: 290px;
+      background: white;
+      padding: 18px 24px;
+      margin: auto 0 auto;
+      z-index: 1000;
+      border :1px solid #ccc;
+      font-family: 'Appian Open Sans', OpenSans, Sans-Serif;
+      font-size: 100%;
+      padding: 18px 24px;
+     
+      
+    }
+
+    .input{
+        font-style: italic;
+        width: auto;
+        height: 34px;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .button_box_buttons{
+        background-color: #1d659c;
+        width: 70.7px;
+        height: 34px;
+        padding: 0 10px;
+        margin: 1px 0;
+        border: 1px solid #1d659c;
+        color:#fff;
+    }
+
+    #user{
+            border: 1px solid #d4d4d4;
+    }
+
+    #password{
+            border: 1px solid #d4d4d4;
+    }
+
+    #forgotPasswordLink{
+    font-weight: normal;
+    font-size: 14px;
+    border-bottom: 1px dotted #777;
+    color: #1d659c;;
+    }
+
+    .remember-me{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    color:#555555;
+    }
+
+    #jsLoginButton{
+          font-style: italic;
+        width: auto;
+        height: 34px;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+input[type="password"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}

@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #05475f;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+.navbar a:hover {
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #34495e;
+  min-width: 160px;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.login-button {
+  background-color: #9eb6bd;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #16a085;
+}
+
+.appian-logo {
+  width: 100px; /* o el tamaño que desees */
+  height: auto; /* mantiene la proporción */
+}
+
+.home-logo {
+  width: 20px; /* o el tamaño que desees */
+  height: auto; /* mantiene la proporción */
+}

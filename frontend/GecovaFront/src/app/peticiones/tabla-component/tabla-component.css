@@ -1,0 +1,27 @@
+table th,td{
+  width: 100%;
+  border: 1px solid #eeeeee;
+}
+
+table th, tr:nth-child(even) {
+  background-color: #fafafa; 
+}
+
+table tr:nth-child(odd) {
+  background-color: #ffffff; 
+}
+
+mat-icon{
+  color: #46708c;
+}
+
+.container{
+  overflow-x: auto;
+  width: 100%;
+  max-width: 99%;
+}
+
+mat-paginator{
+  background-color: #fff;
+  margin: 3%;
+}
